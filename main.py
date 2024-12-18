@@ -18,34 +18,34 @@ class Config(object):
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-   # AUTH_USERS = os.environ.get('AUTH_USERS', '6488911325').split(',')
-    #for i in range(len(AUTH_USERS)):
-    #    AUTH_USERS[i] = int(AUTH_USERS[i])
+    AUTH_USERS = os.environ.get('AUTH_USERS', '1445673621').split(',')
+    for i in range(len(AUTH_USERS)):
+        AUTH_USERS[i] = int(AUTH_USERS[i])
 
-   # GROUPS = os.environ.get('GROUPS', '-1002075880942').split(',')
-   # for i in range(len(GROUPS)):
-    #    GROUPS[i] = int(GROUPS[i])
+    GROUPS = os.environ.get('GROUPS', '-1001992341269').split(',')
+    for i in range(len(GROUPS)):
+        GROUPS[i] = int(GROUPS[i])
 
-    #LOG_CH = os.environ.get("LOG_CH", "-1002059340064")
+    LOG_CH = os.environ.get("LOG_CH", "-650771651")
 
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.#
-#logging.basicConfig(
-#    level=logging.INFO,
- #   format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
-  #  datefmt='%d-%b-%y %H:%M:%S',
-  #  handlers=[
-   #     TelegramLogHandler(
-     #       token=Config.BOT_TOKEN, 
-     #       log_chat_id= Config.LOG_CH, 
-      #      update_interval=2, 
-       #     minimum_lines=1, 
-       #     pending_logs=200000),
-       # logging.StreamHandler()
-  #  ]
-#)
+logging.basicConfig(
+    level=logging.INFO,
+    format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
+    datefmt='%d-%b-%y %H:%M:%S',
+    handlers=[
+        TelegramLogHandler(
+            token=Config.BOT_TOKEN, 
+            log_chat_id= Config.LOG_CH, 
+            update_interval=2, 
+            minimum_lines=1, 
+            pending_logs=200000),
+        logging.StreamHandler()
+   ]
+)
 
-#LOGGER = logging.getLogger(__name__)
-#LOGGER.info("live log streaming to telegram.")
+LOGGER = logging.getLogger(__name__)
+LOGGER.info("live log streaming to telegram.")
 
 
 # Store
