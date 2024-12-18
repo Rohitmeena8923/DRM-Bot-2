@@ -28,24 +28,24 @@ class Config(object):
 
     #LOG_CH = os.environ.get("LOG_CH", "-1002059340064")
 
-# TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.
-logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
-    datefmt='%d-%b-%y %H:%M:%S',
-    handlers=[
-        TelegramLogHandler(
-            token=Config.BOT_TOKEN, 
-            log_chat_id= Config.LOG_CH, 
-            update_interval=2, 
-            minimum_lines=1, 
-            pending_logs=200000),
-        logging.StreamHandler()
-    ]
-)
+# TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.#
+#logging.basicConfig(
+#    level=logging.INFO,
+ #   format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
+  #  datefmt='%d-%b-%y %H:%M:%S',
+  #  handlers=[
+   #     TelegramLogHandler(
+     #       token=Config.BOT_TOKEN, 
+     #       log_chat_id= Config.LOG_CH, 
+      #      update_interval=2, 
+       #     minimum_lines=1, 
+       #     pending_logs=200000),
+       # logging.StreamHandler()
+  #  ]
+#)
 
-LOGGER = logging.getLogger(__name__)
-LOGGER.info("live log streaming to telegram.")
+#LOGGER = logging.getLogger(__name__)
+#LOGGER.info("live log streaming to telegram.")
 
 
 # Store
