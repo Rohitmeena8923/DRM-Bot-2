@@ -18,15 +18,15 @@ class Config(object):
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-    AUTH_USERS = os.environ.get('AUTH_USERS', '1445673621').split(',')
-    for i in range(len(AUTH_USERS)):
-        AUTH_USERS[i] = int(AUTH_USERS[i])
+    #AUTH_USERS = os.environ.get('AUTH_USERS', '1445673621').split(',')
+    #for i in range(len(AUTH_USERS)):
+      #  AUTH_USERS[i] = int(AUTH_USERS[i])
 
-    GROUPS = os.environ.get('GROUPS', '-1001992341269').split(',')
-    for i in range(len(GROUPS)):
-        GROUPS[i] = int(GROUPS[i])
+   # GROUPS = os.environ.get('GROUPS', '-1001992341269').split(',')
+   # for i in range(len(GROUPS)):
+   #     GROUPS[i] = int(GROUPS[i])
 
-    LOG_CH = os.environ.get("LOG_CH", "-650771651")
+   # LOG_CH = os.environ.get("LOG_CH", "-650771651")
 
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.#
 logging.basicConfig(
