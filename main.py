@@ -12,21 +12,21 @@ from tglogging import TelegramLogHandler
 
 # Config 
 class Config(object):
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7053921138:AAGoQZh2x00uTuufuzqEqDYO7YlWQa7KmF8")
-    API_ID = int(os.environ.get("API_ID",  "27498866"))
-    API_HASH = os.environ.get("API_HASH", "96fbb6ad2e11ab04e83ca09ef3f42455")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7428927891:AAHoNzLYya8aRaGF2y-ngluSxzy29LlN3XI")
+    API_ID = int(os.environ.get("API_ID",  "18116881"))
+    API_HASH = os.environ.get("API_HASH", "cca3bacf40fb3ebcb4f075b2e46ff1bd")
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-    #AUTH_USERS = os.environ.get('AUTH_USERS', '1445673621').split(',')
-    #for i in range(len(AUTH_USERS)):
-      #  AUTH_USERS[i] = int(AUTH_USERS[i])
+    AUTH_USERS = os.environ.get('AUTH_USERS', '1445673621').split(',')
+    for i in range(len(AUTH_USERS)):
+        AUTH_USERS[i] = int(AUTH_USERS[i])
 
-   # GROUPS = os.environ.get('GROUPS', '-1001992341269').split(',')
-   # for i in range(len(GROUPS)):
-   #     GROUPS[i] = int(GROUPS[i])
+    GROUPS = os.environ.get('GROUPS', '-1002000904124').split(',')
+    for i in range(len(GROUPS)):
+        GROUPS[i] = int(GROUPS[i])
 
-   # LOG_CH = os.environ.get("LOG_CH", "-650771651")
+    LOG_CH = os.environ.get("LOG_CH", "-650771651")
 
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.#
 logging.basicConfig(
